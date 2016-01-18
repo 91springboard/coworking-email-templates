@@ -1,0 +1,21 @@
+{
+  "name": "coworking-email-templates",
+  "authors": [
+    "Vibhanshu <vibhanshu86@gmail.com>"
+  ],
+  "description": "Contains Email Templates for Coworking App",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mui": "~0.2.10"
+  }
+}

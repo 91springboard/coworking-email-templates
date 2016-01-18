@@ -1,0 +1,88 @@
+<div class="mui--text-black mui--text-center mui--text-subhead">Is this signup information correct?</div>
+<br>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td class="mui-panel">
+            <table
+                    id="content-wrapper"
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    width="100%"
+            >
+                <tbody>
+                <tr>
+                    <td>
+                        <strong>Company Name</strong>
+                    </td>
+                    <td>
+                        {{ data['company_name'] }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Team Admin Name</strong>
+                    </td>
+                    <td>
+                        {{ data['team_admin_name'] }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Team Admin Email</strong>
+                    </td>
+                    <td>
+                        {{ data['team_admin_email'] }}
+                    </td>
+                </tr>
+                {% for plan in data['plans'] %}
+                <tr>
+                    <td>
+                        <strong>{% if loop.first %} Plan(s) and Team {% endif %}</strong>
+                    </td>
+                    <td>
+                        {{plan.name}} (plan.count)
+                    </td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td>
+                        <strong>Hub</strong>
+                    </td>
+                    <td>
+                        {{ data['hub_name'] }}
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <strong>Date of joining</strong>
+                    </td>
+                    <td>
+                        {{ data['joining_date'] }}
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <div class="mui-container ">
+
+                <table
+                        class="mui-btn mui-btn--primary" style="margin: 10px auto;"
+                >
+                    <tr>
+                        <td style="text-align: center">
+                            <a href="{{data['signup_url']}}">Sign Me Up</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>

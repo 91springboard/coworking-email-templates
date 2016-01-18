@@ -1,0 +1,19 @@
+{
+  "name": "coworking-email-templates",
+  "version": "1.0.0",
+  "description": "Contains Email Templates for Coworking App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vibhanshu Chaturvedi <vibhanshu86@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-inline-css": "^3.0.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-sequence": "^0.4.4",
+    "gulp-wrap": "^0.11.0"
+  }
+}

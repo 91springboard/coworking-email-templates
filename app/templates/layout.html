@@ -1,0 +1,65 @@
+<!-- layout.html -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <!-- NOTE: external links are for testing only -->
+    <style type="text/css"
+    >
+        #outlook a {
+            padding: 0;
+        }
+
+        .ReadMsgBody {
+            width: 100%;
+        }
+
+        .ExternalClass {
+            width: 100%;
+        }
+
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%;
+        }
+
+        .mui-container-fixed {
+            width: 600px;
+            display: block;
+            margin: 0 auto;
+            clear: both;
+            text-align: left;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    </style>
+    <link href="styles/app.css" rel="stylesheet"/>
+    <link href="styles/custom.css" rel="stylesheet"/>
+</head>
+<body>
+<table class="mui-body" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td>
+            <center>
+                <!--[if mso]>
+                <table>
+                    <tr>
+                        <td class="mui-container-fixed"><![endif]-->
+                <div class="mui-container">
+                    <h2 class="mui--text-center mui--text-black-54  mui--text-display1">Welcome to 91springboard!</h2>
+                    <%= contents %>
+
+                </div>
+                <!--[if mso]></td></tr></table><![endif]-->
+            </center>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
