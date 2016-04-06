@@ -1,0 +1,53 @@
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td class="mui-panel">
+            <table id="content-wrapper" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                <tr>
+                    <td>
+                        <p>Hi,</p>
+                        <p>Your account has been created. To complete the process please click on Signup button
+                            below.</p>
+                        <table
+                                class="mui-btn mui-btn--primary" style="margin: 10px auto;"
+                        >
+                            <tr>
+                                <td style="text-align: center">
+                                    <a href="{{data['signup_url']}}">Sign Me Up</a>
+                                </td>
+                            </tr>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                            {% if "email" in data %}
+                            <tr>
+                                <td>
+                                    <strong>Email</strong>
+                                </td>
+                                <td>
+                                    {{ data['email'] }}
+                                </td>
+                            </tr>
+                            {% endif %}
+                            {% if "name" in data %}
+                            <tr>
+                                <td>
+                                    <strong>Name</strong>
+                                </td>
+                                <td>
+                                    {{ data['name'] }}
+                                </td>
+                            </tr>
+                            {% endif %}
+                            </tbody>
+                        </table>
+                        <br>
+                        <p>Love,</p>
+                        <p>Team 91springboard</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table>
