@@ -5,9 +5,8 @@
                 <tbody>
                 <tr>
                     <td>
-                        <p>Hi {%if "name" in data%} {{ data['name'] }} {% else %} {{ data['email'] }} {%endif%},</p>
+                        <p>Hi {%if "name" in data and data["name"]%} {{ data['name'] }} {%elif "email" in data and data["email"] %} {{ data['email'] }} {%endif%},</p>
                         <p>You have been assigned <b>{{ data['plan_name'] }}</b> plan in <b>{{ data['organization_name'] }}</b>.</p>
-                        </p>
                         <p>Love,</p>
                         <p>Team 91springboard</p></td>
                     </td>
