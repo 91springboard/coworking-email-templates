@@ -16,6 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "mui": "~0.2.10"
+    "mui": "~0.6.8"
   }
 }

@@ -1,0 +1,38 @@
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr>
+    <td class="mui-panel">
+      <table id="content-wrapper" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+          <td>
+            <p>Hey {%if "name" in data and data["name"]%} {{ data['name'] }} {%elif "email" in data and data["email"] %}
+              {{ data['email'] }} {%endif%},</p>
+            <p> Request you to fill the company onboarding form here, on behalf of your company. Don't worry, won't take
+              more than five minutes of your time!</p>
+            <p>It will help us understand your work better in order to connect you with relevant people who may need
+              your help and
+              vice versa. It will help fellow members to understand what you do and what are your expectations from
+              91springboard
+              family.</p>
+            <p>The information from all our members also gets used time to time to provide insights to the government
+              from an
+              aggregate data set. Your individual information however, is kept confidential.</p>
+            <table
+                class="mui-btn mui-btn--primary" style="margin: 10px auto;"
+            >
+              <tr>
+                <td style="text-align: center">
+                  <a href="{{data['form_url']}}">Onboarding Form</a>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <p>Thanks,</p>
+            <p>Team 91springboard</p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+</table>
