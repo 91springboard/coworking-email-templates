@@ -1,53 +1,54 @@
 <table cellpadding="0" cellspacing="0" border="0" width="100%">
-    <tr>
-        <td class="mui-panel">
-            <table id="content-wrapper" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tbody>
-                <tr>
-                    <td>
-                        <p>Hi {%if "name" in data and data["name"]%} {{ data['name'] }} {%elif "email" in data and data["email"] %} {{ data['email'] }} {%endif%},</p>
-                        <p>Your account has been created. To complete the process please click on Signup button
-                            below.</p>
-                        <table
-                                class="mui-btn mui-btn--primary" style="margin: 10px auto;"
-                        >
-                            <tr>
-                                <td style="text-align: center">
-                                    <a href="{{data['signup_url']}}">Sign Me Up</a>
-                                </td>
-                            </tr>
-                        </table>
-                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                            <tbody>
-                            {% if "email" in data and data["email"] %}
-                            <tr>
-                                <td>
-                                    <strong>Email</strong>
-                                </td>
-                                <td>
-                                    {{ data['email'] }}
-                                </td>
-                            </tr>
-                            {% endif %}
-                            {%if "name" in data and data["name"] %}
-                            <tr>
-                                <td>
-                                    <strong>Name</strong>
-                                </td>
-                                <td>
-                                    {{ data['name'] }}
-                                </td>
-                            </tr>
-                            {% endif %}
-                            </tbody>
-                        </table>
-                        <br>
-                        <p>Love,</p>
-                        <p>Team 91springboard</p>
-                    </td>
-                </tr>
-                </tbody>
+  <tr>
+    <td class="mui-panel">
+      <table id="content-wrapper" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+          <td>
+            <p>Hey {% if name %} {{ name }} {%elif email %}
+              {{ email }} {% endif %},</p>
+            <p>Your account has been created. To complete the process please click on Signup button
+              below.</p>
+            <table
+                class="mui-btn mui-btn--primary" style="margin: 10px auto;"
+            >
+              <tr>
+                <td style="text-align: center">
+                  <a href="{{ signup_url }}">Sign Me Up</a>
+                </td>
+              </tr>
             </table>
-        </td>
-    </tr>
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tbody>
+              {% if email %}
+              <tr>
+                <td>
+                  <strong>Email</strong>
+                </td>
+                <td>
+                  {{ email }}
+                </td>
+              </tr>
+              {% endif %}
+              {%if name %}
+              <tr>
+                <td>
+                  <strong>Name</strong>
+                </td>
+                <td>
+                  {{ name }}
+                </td>
+              </tr>
+              {% endif %}
+              </tbody>
+            </table>
+            <br>
+            <p>Thanks,</p>
+            <p>Team 91springboard</p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
 </table>

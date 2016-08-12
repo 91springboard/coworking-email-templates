@@ -1,18 +1,19 @@
 <table cellpadding="0" cellspacing="0" border="0" width="100%">
-    <tr>
-        <td class="mui-panel">
-            <table id="content-wrapper" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tbody>
-                <tr>
-                    <td>
-                        <p>Hi {%if "name" in data and data["name"]%} {{ data['name'] }} {%elif "email" in data and data["email"] %} {{ data['email'] }} {%endif%},</p>
-                        <p>You have been assigned <b>{{ data['plan_name'] }}</b> plan in <b>{{ data['organization_name'] }}</b>.</p>
-                        <p>Love,</p>
-                        <p>Team 91springboard</p></td>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </td>
-    </tr>
+  <tr>
+    <td class="mui-panel">
+      <table id="content-wrapper" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+          <td>
+            <p>Hey {% if name %} {{ name }} {%elif email %}
+              {{ email }} {% endif %},</p>
+            <p>You have been assigned <b>{{ plan_name }}</b> plan in <b>{{ organization_name }}</b>.</p>
+            <p>Thanks,</p>
+            <p>Team 91springboard</p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
 </table>
