@@ -10,6 +10,7 @@
 
             <p>We have attached the invoice as a PDF.</p>
 
+            {% if payment_url %}
             <table  style="margin: 10px auto;">
               <tr>
                 <td style="text-align: center">
@@ -17,6 +18,7 @@
                 </td>
               </tr>
             </table>
+            {% endif %}
 
             <p>Request you to make the payment before the end of this month, to avoid late payment charges.</p>
 

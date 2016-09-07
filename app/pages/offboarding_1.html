@@ -1,0 +1,39 @@
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr>
+    <td class="mui-panel">
+      <table id="content-wrapper" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+          <td>
+            <p>Dear {% if name %} {{ name }} {%elif email %}
+              {{ email }} {% endif %},</p>
+            <p>Coworking is more than just sharing an office, it is being part of a community. It's amazing people like
+              you that have enriched our community and made it all the more meaningful. We bid you a fond farewell and
+              wish you the best, both professionally and personally, as you move into a new phase. We know you will
+              continue to excel no matter where you are.</p>
+            <p>We have thoroughly enjoyed having you here and sincerely appreciate having had the opportunity to be a
+              part of your journey. If there's ever anything we can help you with, do give us a shout!</p>
+            <p>Request you to take 2 minutes and fill this off-boarding form to help us understand how we can
+              improve.</p>
+            <br>
+            <table
+                class="mui-btn mui-btn--primary" style="margin: 10px auto;"
+            >
+              <tr>
+                <td style="text-align: center">
+                  <a href="{{ form_url }}">Offboarding Form</a>
+                </td>
+              </tr>
+            </table>
+            <p>Au Revoir!</p>
+            <p>Team 91springboard</p>
+            <br>
+            <p>P.S. - An important piece of information we don't want you to miss; your security deposit is safe with us
+              and will be refunded within 45 days from today. Cheers!</p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+</table>
