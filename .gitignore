@@ -1,5 +1,4 @@
 ### Example user template template
-### Example user template
 
 # IntelliJ project files
 .idea
@@ -13,3 +12,5 @@ bower_components/
 /app/styles
 /app/templates/styles
 /app/*.html
+.tmp/
+*.css

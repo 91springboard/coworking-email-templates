@@ -1,0 +1,33 @@
+<p>Hi,</p>
+<p>A new user has signed up for {{location}} space.</p>
+<p>Name: {{name}}</p>
+<p>Email: <a href="mailto:{{email}}">{{email}}</a></p>
+<p>Phone: {{phone}}</p>
+<p>Company: {{company}}</p>
+<p>Address: {{address}}</p>
+<p>Start Date: {{started_on}}</p>
+<table>
+    <thead>
+        <th>Plan</th>
+        <th>Quantity</th>
+    </thead>
+    <tbody>
+    {% for plan in plans %}
+       {% if plan.quantity > 0 %}
+        <tr>
+            <td style="text-align: center;">
+                {{ plan.name }}
+            </td>
+            <td style="text-align: center;">
+                {{ plan.quantity }}
+            </td>
+        </tr>
+        {% endif %}
+    {% endfor %}
+    </tbody>
+</table>
+<br>
+<br>
+<p>Cheers,
+<br>
+Team 91</p>

@@ -1,0 +1,12 @@
+<p>Hey {{ name }},</p>
+<p>Thank you for RSVPing to <a href="{{ url }}" target="_blank">{{ event.title }}</a></p>
+<p>
+    {{ config.MAIL['RSVP'][ event.email_template or 0] }}
+</p>
+<p class="text-center">{{ event.title }}, {{ event.start_date | datetime("%B %d, %Y") }}
+    at {{ event.venue.name }}</p>
+{% if send_aws_credit_link %}
+	<p class="text-center">We see that you are interested in Amazon Web Services. You can <a href='https://aws.amazon.com/activate/event/spr1nb0ard/' target="_blank">avail your $100 cloud credits here.</a></p>
+{% endif %}
+<p>See you there!</p>
+<p>Team 91</p>
