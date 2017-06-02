@@ -1,0 +1,26 @@
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr>
+    <td class="mui-panel">
+      <table id="content-wrapper" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+          <td>
+            <p>Hey {{name}}</p>
+            <p>We just received your application for {{booster}}. The default turnaround time for any application is 10 days.</p>
+            <p>Here are the details we'll be sharing with our partner:</p>
+            <ul class="mui-list--unstyled">
+            {{#each profileData as |value key|}}
+            <li>{{key}}: {{value}}</li>
+            {{/each}}
+            </ul>
+            <p>Our partner will get in touch with you shortly to process the same, meanwhile
+              please feel free to explore other boosters that you feel will be beneficial for your business.</p>
+            <p>Thank you and and have a good day ahead!</p>
+            <p>Team 91springboard</p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+</table>

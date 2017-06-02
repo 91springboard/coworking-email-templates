@@ -4,7 +4,10 @@
   "description": "Contains Email Templates for Coworking App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve:cowork": "gulp serve --base=cowork",
+    "build:cowork": "gulp build --base=cowork",
+    "serve:events": "gulp serve --base=events",
+    "build:events": "gulp build --base=events"
   },
   "author": "Vibhanshu Chaturvedi <vibhanshu86@gmail.com>",
   "license": "MIT",
