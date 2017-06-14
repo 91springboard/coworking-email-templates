@@ -1,10 +1,27 @@
-<p>Hey {{ name }},</p>
-<p>Thank you for RSVPing to <a href="{{ url }}" target="_blank">{{ event.title }}</a></p>
+<p>Hey {{ user_name }},</p>
+<p>Thank you for RSVPing to <a href="{{ url }}" target="_blank">{{ title }}</a></p>
 <p>
-    {{ config.MAIL['RSVP'][ event.email_template or 0] }}
+    {{ config.MAIL['RSVP'][email_template] }}
 </p>
-<p class="text-center">{{ event.title }}, {{ event.start_date | datetime("%B %d, %Y") }}
-    at {{ event.venue.name }}</p>
+<table>
+  <tbody>
+  <tr>
+    <td>Event:</td>
+    <td>{{ title }}</td>
+  </tr>
+  <tr>
+    <td>Timing:</td>
+    <td>{{ start_date | UTCIntoIST | displayDate }} <a
+        href="https://www.google.com/calendar/render?action=TEMPLATE&text={{ title }}&dates={{ start_date | UTCIntoIST | datetime('%Y%m%dT%H%M%S') }}/{{ end_date | UTCIntoIST | datetime('%Y%m%dT%H%M%S') }}&details={{ details }}&location={{ venue_address }}&nbsp;{{venue_name }}&ctz=Asia/Kolkata&sf=true&output=xml"
+        target="_blank">Add To Google Calendar</a></td>
+  </tr>
+  <tr>
+    <td>Venue:</td>
+    <td>{{ venue_address }},&nbsp;<b>{{ venue_name }}</b></td>
+  </tr>
+  </tbody>
+</table>
+<br/>
 {% if send_aws_credit_link %}
 	<p class="text-center">We see that you are interested in Amazon Web Services. You can <a href='https://pages.awscloud.com/91-Springboard-Event-2017.html' target="_blank">avail your $100 cloud credits here.</a></p>
 {% endif %}
